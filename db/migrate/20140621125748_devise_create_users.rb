@@ -19,6 +19,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
+      t.string   :name
+      t.string   :location 
+      t.text     :description
+      t.integer  :rate 
+      t.decimal  :lat, :precision => 18, :scale => 14 
+      t.decimal  :lng, :precision => 18, :scale => 14
+            
+
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
